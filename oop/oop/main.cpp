@@ -17,5 +17,8 @@ void main()
 	ds = p1->Distance(p2);
 
 	cout << "Distance between p1 and p2: " << ds << endl;
+	delete p1;
+	delete p2;
+
 	system("pause");
 }
