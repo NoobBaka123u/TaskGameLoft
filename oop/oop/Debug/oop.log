@@ -1,3 +1,5 @@
 ﻿  main.cpp
-  oop.vcxproj -> D:\TaskGameLoft\oop\Debug\oop.exe
-  oop.vcxproj -> D:\TaskGameLoft\oop\Debug\oop.pdb (Partial PDB)
+d:\taskgameloft\oop\oop\main.cpp : fatal error C1041: cannot open program database 'D:\TaskGameLoft\oop\oop\Debug\vc140.idb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  MyPoint.cpp
+d:\taskgameloft\oop\oop\mypoint.cpp : fatal error C1041: cannot open program database 'D:\TaskGameLoft\oop\oop\Debug\vc140.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+  Generating Code...
