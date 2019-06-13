@@ -15,7 +15,7 @@ MyPoint::MyPoint(int x, int y)
 
 MyPoint::~MyPoint()
 {
-	cout << "Destroy!!";
+	cout << "Destroy!" << endl;
 }
 
 void MyPoint::Display() 
