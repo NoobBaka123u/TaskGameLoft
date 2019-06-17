@@ -38,4 +38,19 @@ void Flu::DoDie()
 
 void Flu::InitResistance()
 {
+	int r = rand() % 2 + 1;
+	if (r == 1)
+	{
+		this->m_color = 0x0000ff;
+		r = rand() % 20 + 10;
+		this->SetResistancePathogen(r);
+		cout << "Red Flu" << " " << "Risistance:" << GetResistancePathogen() << endl;
+	}
+	else
+	{
+		this->m_color = 0xff0000;
+		r = rand() % 15 + 10;
+		this->SetResistancePathogen(r);
+		cout << "Blue Flu" << " " << "Risistance:" << GetResistancePathogen() << endl;
+	}
 }
