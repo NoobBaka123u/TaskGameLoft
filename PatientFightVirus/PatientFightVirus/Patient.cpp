@@ -101,3 +101,8 @@ void Patient::DoDie()
 	delete this;
 	cout << "Patient dead!!!" << endl;
 }
+
+int Patient::GetState()
+{
+	return this->m_state;
+}
