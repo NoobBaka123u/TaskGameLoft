@@ -16,9 +16,7 @@ void main()
 		cout << "Take Medicine (No = 0, Yes = 1 : " << endl;
 		cin >> t;
 		int min = 1;
-
 		int max = 15;
-
 		int medicineResistance = min + (rand() % (max - min + 1));
 		cout << "Medicine Resistance : " << medicineResistance << endl;
 		patient->TakeMedicine(medicineResistance);
