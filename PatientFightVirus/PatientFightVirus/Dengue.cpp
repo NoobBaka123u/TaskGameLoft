@@ -25,7 +25,12 @@ void Dengue::DoBorn()
 
 list<Pathogen*> Dengue::DoClone()
 {
-	return list<Pathogen*>();
+	Pathogen* dengue1 = new Dengue(this);
+	Pathogen* dengue2 = new Dengue(this);
+	list<Pathogen*> dengueClone;
+	dengueClone.push_back(dengue1);
+	dengueClone.push_back(dengue2);
+	return dengueClone;
 }
 
 void Dengue::DoDie()
