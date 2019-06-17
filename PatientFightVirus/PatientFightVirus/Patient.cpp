@@ -24,3 +24,9 @@ int Patient::GetResistancePatient()
 {
 	return this->m_resistance;
 }
+
+void Patient::InitResistance()
+{
+	int r = rand() % 9000 + 1000;
+	this->SetResistancePatient(r);
+}
