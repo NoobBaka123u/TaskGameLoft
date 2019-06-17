@@ -25,7 +25,10 @@ void Flu::DoBorn()
 
 list<Pathogen*> Flu::DoClone()
 {
-	return list<Pathogen*>();
+	Pathogen* flu = new Flu(this);
+	list<Pathogen*> fluClone;
+	fluClone.push_back(flu);
+	return fluClone;
 }
 
 void Flu::DoDie()
