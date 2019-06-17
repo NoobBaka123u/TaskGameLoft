@@ -33,6 +33,7 @@ list<Pathogen*> Flu::DoClone()
 
 void Flu::DoDie()
 {
+	delete this;
 }
 
 void Flu::InitResistance()
