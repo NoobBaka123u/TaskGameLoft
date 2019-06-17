@@ -1,4 +1,4 @@
-#include "Flu.h"
+﻿#include "Flu.h"
 
 
 
@@ -14,10 +14,13 @@ Flu::Flu(const Flu* flu) :Pathogen(flu)
 
 Flu::~Flu()
 {
+
 }
 
 void Flu::DoBorn()
 {
+	this->LoadADNInformation​();
+	this->InitResistance();
 }
 
 list<Pathogen*> Flu::DoClone()
