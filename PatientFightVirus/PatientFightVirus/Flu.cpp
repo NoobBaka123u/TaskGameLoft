@@ -7,6 +7,10 @@ Flu::Flu()
 	this->DoBorn();
 }
 
+Flu::Flu(const Flu* flu) :Pathogen(flu)
+{
+	this->m_color = flu->m_color;
+}
 
 Flu::~Flu()
 {
