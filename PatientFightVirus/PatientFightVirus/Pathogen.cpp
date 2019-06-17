@@ -16,6 +16,7 @@ Pathogen::Pathogen(const Pathogen* pathogen)
 
 Pathogen::~Pathogen()
 {
+	cout << "Destroy Pathogen!!!" << endl;
 }
 
 void Pathogen::SetResistancePathogen(int m_resistance)
