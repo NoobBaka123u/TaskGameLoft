@@ -30,3 +30,25 @@ void Patient::InitResistance()
 	int r = rand() % 9000 + 1000;
 	this->SetResistancePatient(r);
 }
+
+void Patient::DoStart()
+{
+	this->InitResistance();
+	int amountVirus = rand() % 20 + 10;
+	int typeVirus;
+	for (int i = 0; i < amountVirus; i++)
+	{
+		typeVirus = rand() % 2 + 1;
+		if (typeVirus == 1)
+		{
+			Pathogen *flu = new Flu();
+			m_pathogenList.push_back(flu);
+		}
+		else
+		{
+			Pathogen *dengue = new Dengue();
+			m_pathogenList.push_back(dengue);
+		}
+	}
+	this->m_state = 1;
+}
