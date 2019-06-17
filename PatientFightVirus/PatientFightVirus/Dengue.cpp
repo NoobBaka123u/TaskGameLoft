@@ -35,6 +35,7 @@ list<Pathogen*> Dengue::DoClone()
 
 void Dengue::DoDie()
 {
+	delete this;
 }
 
 void Dengue::InitResistance()
