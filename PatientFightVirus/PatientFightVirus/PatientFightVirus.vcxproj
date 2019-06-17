@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="Dengue.cpp" />
     <ClCompile Include="Flu.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Pathogen.cpp" />
     <ClCompile Include="Patient.cpp" />
   </ItemGroup>
