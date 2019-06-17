@@ -17,4 +17,5 @@ Patient::~Patient()
 
 void Patient::SetResistancePatient(int m_resistance)
 {
+	this->m_resistance = m_resistance;
 }
