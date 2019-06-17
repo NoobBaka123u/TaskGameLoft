@@ -12,6 +12,7 @@ Patient::Patient()
 
 Patient::~Patient()
 {
+	cout << "Destroy Patient!" << endl;
 }
 
 void Patient::SetResistancePatient(int m_resistance)
