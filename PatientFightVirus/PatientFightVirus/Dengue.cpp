@@ -1,4 +1,4 @@
-#include "Dengue.h"
+﻿#include "Dengue.h"
 
 
 
@@ -19,6 +19,8 @@ Dengue::~Dengue()
 
 void Dengue::DoBorn()
 {
+	this->LoadADNInformation​();
+	this->InitResistance();
 }
 
 list<Pathogen*> Dengue::DoClone()
