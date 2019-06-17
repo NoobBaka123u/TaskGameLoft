@@ -26,7 +26,7 @@ void Pathogen::SetResistancePathogen(int m_resistance)
 
 int Pathogen::GetResistancePathogen()
 {
-	return 0;
+	return this->m_resistance;
 }
 
 void Pathogen::LoadADNInformation​()
