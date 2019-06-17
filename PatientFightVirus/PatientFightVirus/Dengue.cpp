@@ -7,8 +7,9 @@ Dengue::Dengue()
 	this->DoBorn();
 }
 
-Dengue::Dengue(const Dengue * pathogen)
+Dengue::Dengue(const Dengue *dengue) : Pathogen(dengue)
 {
+	this->m_protein[BUFFER_SIZE] = dengue->m_protein[BUFFER_SIZE];
 }
 
 
