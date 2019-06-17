@@ -19,3 +19,8 @@ void Patient::SetResistancePatient(int m_resistance)
 {
 	this->m_resistance = m_resistance;
 }
+
+int Patient::GetResistancePatient()
+{
+	return this->m_resistance;
+}
