@@ -94,3 +94,10 @@ void Patient::TakeMedicine(int medicineResitance)
 		this->SetResistancePatient(patientResistanceNow);
 	}
 }
+
+void Patient::DoDie()
+{
+	this->m_state = 0;
+	delete this;
+	cout << "Patient dead!!!" << endl;
+}
