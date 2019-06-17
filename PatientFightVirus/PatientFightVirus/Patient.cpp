@@ -1,4 +1,4 @@
-#include "Patient.h"
+﻿#include "Patient.h"
 
 
 
@@ -51,4 +51,46 @@ void Patient::DoStart()
 		}
 	}
 	this->m_state = 1;
+}
+
+void Patient::TakeMedicine(int medicineResitance)
+{
+	list<Pathogen*>::iterator iter;
+	int sizeList = m_pathogenList.size();
+	iter = m_pathogenList.begin();
+	int medicineResistanceNow;
+	int totalResistancePathogen = 0;
+	list<Pathogen*> listPathogenClone;
+
+	for (int i = 0; i < sizeList; i++)
+	{
+		medicineResistanceNow = (*iter)->ReduceResistance​(medicineResitance);
+		if (medicineResistanceNow <= 0)
+		{
+			(*iter)->DoDie();
+			m_pathogenList.erase(iter++);
+		}
+		else
+		{
+			listPathogenClone = (*iter++)->DoClone();
+			m_pathogenList.insert(m_pathogenList.end(), listPathogenClone.begin(), listPathogenClone.end());
+			totalResistancePathogen += medicineResistanceNow;
+		}
+	}
+	if (totalResistancePathogen == 0)
+	{
+		this->m_state = 0;
+		this->GetState();
+		cout << "Clean Pathogen!!" << endl;
+	}
+	int patientResistanceNow = this->GetResistancePatient() - totalResistancePathogen;
+	if (patientResistanceNow <= 0)
+	{
+		this->GetState();
+		this->DoDie();
+	}
+	else
+	{
+		this->SetResistancePatient(patientResistanceNow);
+	}
 }
