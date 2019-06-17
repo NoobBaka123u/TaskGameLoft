@@ -21,7 +21,7 @@ Pathogen::~Pathogen()
 
 void Pathogen::SetResistancePathogen(int m_resistance)
 {
-
+	this->m_resistance = m_resistance;
 }
 
 int Pathogen::GetResistancePathogen()
